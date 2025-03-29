@@ -37,48 +37,73 @@ header p {
 
 /* Timeline section styling */
 section {
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping for horizontal scrolling */
-  overflow-x: auto; /* Enable horizontal scrolling */
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center; /* Center-align cards */
   gap: 20px; /* Space between cards */
   padding: 20px;
 }
 
 section div {
-  background-color: white; /* White card background */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
-  width: 300px; /* Fixed card width */
-  padding: 15px;
+  flex: 1 1 300px; /* Allow cards to grow and shrink, with a minimum width of 300px */
+  max-width: 400px; /* Limit the maximum width of cards */
+  font-family: Arial, sans-serif; /* Consistent font */
+  color: #333; /* Dark text for readability */
+  background-color: #ffffff; /* Clean white background */
+  border: 1px solid #cccccc; /* Subtle border for definition */
+  padding: 20px; /* Consistent padding */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   text-align: center; /* Center-align text */
   transition: transform 0.3s; /* Smooth hover effect */
+  position: relative; /* Enable positioning for hover effects */
+  overflow: hidden; /* Hide content that overflows the card */
 }
 
 section div:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+section div p {
+  font-size: 1rem; /* Standardize paragraph text size */
+  line-height: 1.6; /* Improve readability */
+  margin-top: 10px; /* Add spacing above the text */
+  color: #555; /* Softer gray for paragraph text */
+  max-height: 3em; /* Limit visible text to 3 lines */
+  overflow: hidden; /* Hide overflowing text */
+  transition: max-height 0.3s ease; /* Smooth transition for height */
+}
+
+section div:hover p {
+  max-height: 10em; /* Expand to show more text on hover */
+}
+
 section img {
   max-width: 100%; /* Make images responsive */
-  border-radius: 4px; /* Rounded image corners */
-  margin-bottom: 10px;
+  border: 2px solid #ddd; /* Add a border around images */
+  border-radius: 8px; /* Match card's rounded corners */
+  margin-bottom: 15px; /* Space below the image */
 }
 
 section h2 {
-  font-size: 1.5rem; /* Year heading size */
-  color: #0071c5; /* Intel blue */
+  font-size: 1.6rem; /* Slightly larger year heading */
+  font-weight: bold; /* Emphasize the year */
+  color: #0056a4; /* Intel blue for branding */
+  margin-bottom: 10px; /* Space below the year */
 }
 
 section h3 {
-  font-size: 1.2rem; /* Subheading size */
-  margin: 10px 0;
+  font-size: 1.3rem; /* Slightly larger subheading */
+  font-weight: bold; /* Emphasize the milestone title */
+  color: #0071c5; /* Intel blue for consistency */
+  margin-bottom: 10px; /* Space below the title */
 }
 
 section p {
-  font-size: 0.9rem; /* Smaller paragraph text */
-  line-height: 1.5; /* Improve readability */
+  font-size: 1rem; /* Standardize paragraph text size */
+  line-height: 1.6; /* Improve readability */
+  margin-top: 10px; /* Add spacing above the text */
+  color: #555; /* Softer gray for paragraph text */
 }
 
 /* Footer text styling */
@@ -91,8 +116,8 @@ p {
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
   section {
-    flex-wrap: wrap; /* Stack cards vertically */
-    overflow-x: visible; /* Disable horizontal scrolling */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align stacked cards */
   }
 
   section div {
