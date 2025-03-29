@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-  font-family: Arial, sans-serif; /* Easy-to-read font */
+  font-family: 'Lato', 'Roboto', 'Source Sans Pro', Arial, sans-serif; /* Body text fonts */
   margin: 0;
   padding: 0;
   background-color: #f4f4f4; /* Light gray background */
@@ -9,6 +9,7 @@ body {
 
 /* Hero Section Styling */
 header {
+  font-family: 'Poppins', 'Oswald', 'Montserrat', Arial, sans-serif; /* Header text fonts */
   text-align: center; /* Center-align content */
   background: linear-gradient(135deg, #0056a4, #0071c5); /* Intel-branded gradient */
   color: white; /* White text for contrast */
@@ -49,19 +50,20 @@ section div {
   max-width: 400px; /* Limit the maximum width of cards */
   font-family: Arial, sans-serif; /* Consistent font */
   color: #333; /* Dark text for readability */
-  background-color: #ffffff; /* Clean white background */
-  border: 1px solid #cccccc; /* Subtle border for definition */
+  background: linear-gradient(135deg, #ffffff, #f0f8ff); /* Subtle gradient background */
+  border: 2px solid #0071c5; /* Intel blue border */
   padding: 20px; /* Consistent padding */
-  border-radius: 10px; /* Slightly rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
   text-align: center; /* Center-align text */
-  transition: transform 0.3s; /* Smooth hover effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
   position: relative; /* Enable positioning for hover effects */
   overflow: hidden; /* Hide content that overflows the card */
 }
 
 section div:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.08); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 section div p {
@@ -69,9 +71,9 @@ section div p {
   line-height: 1.6; /* Improve readability */
   margin-top: 10px; /* Add spacing above the text */
   color: #555; /* Softer gray for paragraph text */
-  max-height: 3em; /* Limit visible text to 3 lines */
-  overflow: hidden; /* Hide overflowing text */
-  transition: max-height 0.3s ease; /* Smooth transition for height */
+  max-height: none; /* Remove height limitation */
+  overflow: visible; /* Ensure all text is visible */
+  transition: none; /* Remove transition effect */
 }
 
 section div:hover p {
@@ -80,22 +82,23 @@ section div:hover p {
 
 section img {
   max-width: 100%; /* Make images responsive */
-  border: 2px solid #ddd; /* Add a border around images */
-  border-radius: 8px; /* Match card's rounded corners */
+  border: 3px solid #ddd; /* Thicker border around images */
+  border-radius: 10px; /* Match card's rounded corners */
   margin-bottom: 15px; /* Space below the image */
 }
 
 section h2 {
-  font-size: 1.6rem; /* Slightly larger year heading */
+  font-size: 2rem; /* Larger year heading */
   font-weight: bold; /* Emphasize the year */
-  color: #0056a4; /* Intel blue for branding */
+  color: #03396f; /* Darker Intel blue for stronger contrast */
   margin-bottom: 10px; /* Space below the year */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
 }
 
 section h3 {
-  font-size: 1.3rem; /* Slightly larger subheading */
+  font-size: 1.4rem; /* Slightly larger subheading */
   font-weight: bold; /* Emphasize the milestone title */
-  color: #0071c5; /* Intel blue for consistency */
+  color: #0056a4; /* Intel blue for consistency */
   margin-bottom: 10px; /* Space below the title */
 }
 
