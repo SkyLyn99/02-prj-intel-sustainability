@@ -104,8 +104,8 @@ section h3 {
 
 section p {
   font-size: 1rem; /* Standardize paragraph text size */
-  line-height: 1.6; /* Improve readability */
-  margin-top: 10px; /* Add spacing above the text */
+  line-height: 3.6; /* Improve readability */
+  margin-top: 30px; /* Add spacing above the text */
   color: #555; /* Softer gray for paragraph text */
 }
 
@@ -114,6 +114,20 @@ p {
   text-align: center;
   font-size: 0.9rem;
   margin: 20px 0;
+}
+
+/* Match the footer background color to the header gradient */
+footer {
+  background: linear-gradient(135deg, #0056a4, #0071c5); /* Same gradient as the header */
+}
+
+/* Make the Innovation, Sustainability, and Community headings stand out */
+footer h3 {
+  text-decoration: underline; /* Underline the text to emphasize it */
+  font-size: 1.8rem; /* Increase the font size for better visibility */
+  color: #ffffff; /* Ensure the text color contrasts with the footer background */
+  margin-bottom: 10px; /* Add spacing below the heading */
+  line-height: 2; /* Increase line spacing for better readability */
 }
 
 /* Responsive design for smaller screens */
@@ -126,4 +140,49 @@ p {
   section div {
     width: 90%; /* Make cards take up more space */
   }
+}
+
+/* Adjust the three-column layout to make it wider and longer for better readability */
+.container {
+  width: 90%; /* Make the container take up 90% of the screen width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Ensure all three-column layout cards are visible on different screen sizes */
+.row {
+  display: flex; /* Arrange columns horizontally */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center-align columns */
+}
+
+.col-md-4 {
+  flex: 1 1 300px; /* Each column takes up at least 300px */
+  max-width: 400px; /* Limit the maximum width of each column */
+  margin: 10px; /* Add spacing around each column */
+}
+
+/* Column styling */
+.col-md-4 {
+  width: 100%; /* Ensure columns take up full width in their container */
+  max-width: 400px; /* Limit the maximum width of each column */
+  min-height: 300px; /* Increase the height for better text visibility */
+  margin: 10px auto; /* Add spacing between columns and center them */
+  padding: 20px; /* Add padding inside the columns */
+  background-color: #f9f9f9; /* Light background for readability */
+  border: 1px solid #ddd; /* Add a subtle border */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  text-align: center; /* Center-align text */
+}
+
+/* Text styling inside columns */
+.col-md-4 h3 {
+  font-size: 1.5rem; /* Slightly larger heading size */
+  margin-bottom: 10px; /* Add space below the heading */
+}
+
+.col-md-4 p {
+  font-size: 1rem; /* Standard paragraph text size */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 15px; /* Add space below the paragraph */
 }
