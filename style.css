@@ -109,6 +109,23 @@ section p {
   color: #555; /* Softer gray for paragraph text */
 }
 
+/* Style the "Learn More" buttons to make them stand out */
+section a {
+  display: inline-block; /* Make the link look like a button */
+  background-color: white; /* White background for contrast */
+  color: #51a7e8; /* Intel blue text color */
+  padding: 10px 20px; /* Add padding for a button-like appearance */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 10px; /* Add spacing above the button */
+}
+
+section a:hover {
+  background-color: #0056a4; /* Darker blue on hover */
+  color: white; /* White text on hover */
+}
+
 /* Footer text styling */
 p {
   text-align: center;
@@ -128,6 +145,15 @@ footer h3 {
   color: #ffffff; /* Ensure the text color contrasts with the footer background */
   margin-bottom: 10px; /* Add spacing below the heading */
   line-height: 2; /* Increase line spacing for better readability */
+}
+
+/* Remove the blue box effect by eliminating the border and shadow */
+footer .container {
+  background-color: #0071c5; /* Keep the lighter Intel blue background */
+  padding: 20px; /* Maintain padding for spacing */
+  border-radius: 5px; /* Keep slightly rounded corners */
+  border: none; /* Remove the border */
+  box-shadow: none; /* Remove the shadow */
 }
 
 /* Responsive design for smaller screens */
