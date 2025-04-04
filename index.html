@@ -156,9 +156,30 @@
       <input type="email" placeholder="Enter your email" style="padding: 15px; width: 100%; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px; font-size: 1rem;">
 
       <!-- Subscribe button -->
-      <button type="submit" style="padding: 15px 30px; background-color: #0071c5; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;">Subscribe</button>
+      <button type="button" style="padding: 15px 30px; background-color: #0071c5; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</button>
     </div>
   </section>
+
+  <!-- Modal Structure -->
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscribeModalLabel">Thank You for Subscribing!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          You have successfully subscribed to Intel's Sustainability Newsletter. Stay tuned for updates!
+        </div>
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Add a footer with a three-column layout using Bootstrap -->
   <footer class="bg-dark text-white py-4">
@@ -200,5 +221,32 @@
       <a href="#" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Contact</a>
     </nav>
   </footer>
+
+  <!-- Add a script to detect language changes and apply RTL mode -->
+  <script>
+    // Function to check the page's language direction
+    function checkLanguageDirection() {
+      // Get the current language direction from the HTML tag
+      const htmlElement = document.documentElement;
+      const direction = htmlElement.getAttribute('dir');
+
+      // If the direction is RTL, apply RTL styles
+      if (direction === 'rtl') {
+        document.body.style.direction = 'rtl';
+        document.body.style.textAlign = 'right';
+      } else {
+        // Reset to LTR styles if not RTL
+        document.body.style.direction = 'ltr';
+        document.body.style.textAlign = 'left';
+      }
+    }
+
+    // Run the function when the page loads
+    window.addEventListener('load', checkLanguageDirection);
+
+    // Run the function when the language attribute changes (e.g., via Google Translate)
+    const observer = new MutationObserver(checkLanguageDirection);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+  </script>
 </body>
 </html>
